@@ -61,10 +61,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             tvTitle = itemView.findViewById(R.id.tvTitle);
             ivPoster = itemView.findViewById(R.id.ivPoster);
         }
-
         public void bind(Movie movie) {
             tvTitle.setText(movie.getTitle());
             tvOverview.setText(movie.getOverview());
+            Log.i(TAG, movie.getPosterPath());
             Glide.with(context).load(movie.getPosterPath()).into(ivPoster);
         }
     }
